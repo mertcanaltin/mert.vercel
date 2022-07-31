@@ -108,7 +108,7 @@ We also have another [example](https://github.com/vercel/examples/tree/main/solu
 
 ## Author
 
-- Steven Tey ([@mertcanaltin](https://twitter.com/mecaltin))
+- Mert Can Altin ([@mertcanaltin](https://twitter.com/mecaltin))
 
 ## License
 
