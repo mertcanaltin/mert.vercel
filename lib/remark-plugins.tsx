@@ -4,9 +4,10 @@ import visit from "unist-util-visit";
 import { getTweets } from "@/lib/twitter";
 
 import type { Literal, Node } from "unist";
-import type { Example } from "@prisma/client";
+import type { Example, PrismaClient } from "@prisma/client";
 
 import type { WithChildren } from "@/types";
+import { PrismaClientOptions } from "@prisma/client/runtime";
 
 interface NodesToChange {
   node: Literal<string>;
@@ -100,23 +101,18 @@ export function replaceExamples<T extends Node>(prisma: PrismaClient) {
       resolve();
     });
 }
-
-interface PrismaClient {
-  example: {
-    [x: string]: any;
-    where: {
-      id?: string | number | undefined;
-    }
+interface Prisma {
+  where: {
+    id: number | any;
   }
 }
-
 async function getExamples(node: any, prisma: PrismaClient) {
   const names = node?.attributes[0].value.split(",");
 
   const data = new Array<Example | null>();
 
   for (let i = 0; i < names.length; i++) {
-    const results = await prisma.example.findUnique({
+    const results = await prisma.example.findUnique<Prisma>({
       where: {
         id: parseInt(names[i]),
       },
