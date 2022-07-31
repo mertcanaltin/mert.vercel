@@ -101,6 +101,15 @@ export function replaceExamples<T extends Node>(prisma: PrismaClient) {
     });
 }
 
+interface PrismaClient {
+  example: {
+    [x: string]: any;
+    where: {
+      id?: string | number | undefined;
+    }
+  }
+}
+
 async function getExamples(node: any, prisma: PrismaClient) {
   const names = node?.attributes[0].value.split(",");
 
