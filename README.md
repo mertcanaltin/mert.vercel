@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://demo.vercel.pub">
     <img src="https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png" height="96">
-    <h3 align="center">Platforms Starter Kit</h3>
+    <h3 align="center">Platforms Starter Kit for MongoDb</h3>
   </a>
 </p>
 
@@ -95,7 +95,7 @@ This working demo site was built using the Platforms Starter Kit and:
 - [Next.js](https://nextjs.org/) as the React framework
 - [Tailwind](https://tailwindcss.com/) for CSS styling
 - [Prisma](https://prisma.io/) as the ORM for database access
-- [PlanetScale](https://planetscale.com/) as the database (MySQL)
+- [MongoDb](https://mongodb.com/) as the database (MongoDB)
 - [NextAuth.js](https://next-auth.js.org/) for authentication
 - [Vercel](http://vercel.com/) for deployment
 
@@ -108,7 +108,7 @@ We also have another [example](https://github.com/vercel/examples/tree/main/solu
 
 ## Author
 
-- Steven Tey ([@steventey](https://twitter.com/steventey))
+- Mert Can Altin ([@mertcanaltin](https://twitter.com/mecaltin))
 
 ## License
 
