@@ -11,7 +11,7 @@ module.exports = {
     ],
   },
   reactStrictMode: true,
-  swcMinify: false, // Required to fix: https://nextjs.org/docs/messages/failed-loading-swc,
+  swcMinify: false, // Required to fix: https://nextjs.org/docs/messages/failed-loading-swc
   async headers() {
     return [
       {
